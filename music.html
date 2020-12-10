@@ -1,0 +1,26 @@
+<html>
+
+<head>
+    <script type="text/javascript" src="js/music.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/music.css">
+</head>
+
+<body>
+    <div>
+        <img src="png/walker.jfif" align="center"/>
+    </div>
+    <div id="wrapper">
+        <div id='player'>
+            <audio id="music_player">
+<source src="music\Alan_Walker_-_On_My_Way_(Trap_Nation_Remix)(MP3_128K).mp3"/>
+</audio>
+            <input type="image" src="png/icons8-play-30.png" onclick="play_aud()" id="play_button">
+            <input type="image" src="png/icons8-pause-30.png" onclick="pause_aud()" id="play_button">
+            <input type="image" src="png/icons8-stop-30.png" onclick="stop_aud()" id="play_button">
+            <img src="png/icons8-speaker-30.png" id="vol_img">
+            <input type="range" id="change_vol" onchange="change_vol()" step="0.05" min="0" max="1" value="1">
+        </div>
+    </div>
+</body>
+
+</html>

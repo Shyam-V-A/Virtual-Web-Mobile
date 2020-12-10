@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        input,
+        span {
+            font-size: 20px;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>
+        <label>MPH</label>
+        <input id="inputMPH" type="number" placeholder="MPH" oninput="speedConverterM(this.value)" onchange="speedConverterM(this.value)">
+    </p>
+    <p>KPH: <span id="outputKPH"></span></p>
+    <br>
+    <br>
+
+    <p>
+        <label>KPH</label>
+        <input id="inputKPH" type="number" placeholder="KPH" oninput="speedConverterK(this.value)" onchange="speedConverterK(this.value)">
+    </p>
+    <p>MPH: <span id="outputMPH"></span></p>
+
+
+    <script>
+        /* When the input field receives input, convert the value from mph to kph */
+        function speedConverterM(valNum) {
+            valNum = parseFloat(valNum);
+            document.getElementById("outputKPH").innerHTML = valNum * 1.609344;
+        }
+
+
+        function speedConverterK(valNum) {
+            valNum = parseFloat(valNum);
+            document.getElementById("outputMPH").innerHTML = valNum / 1.609344;
+        }
+    </script>
+</body>
+
+</html>
